@@ -1,0 +1,266 @@
+
+.app {
+    background: #ebebeb;
+    display: grid;  
+    grid-template-areas: 
+        "cabecalho"
+        "conteudo"
+        "rodape";
+    grid-template-columns: auto;
+    grid-template-rows: 50px auto auto; 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*cabeçalho*/
+.cabecalho{
+    align-items: center;
+    display: flex;
+    padding: 0 2rem;
+}
+
+.menu__link{
+ color: #333;
+ padding: .5rem 1rem;
+ text-decoration: none;
+}
+
+.menu__link:hover, .menu__link.ativo{
+    border-bottom: 2px solid #0073e6;
+}
+
+.menu__item{
+    list-style-type: none;
+}
+/*destaques*/
+
+.destaques {
+    display: grid;
+    gap: .2rem;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 33.33% 33.33% 33.33%;
+    height: 100vh;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.destaques__principal{
+    background: url('imagens/fortnite.jpg') no-repeat center / cover;
+    grid-column: 1 / 4;
+    grid-row: 1 / 3;
+}
+
+.destaques__principal:hover{
+    background: url('imagens/fortnite2.jpg') no-repeat center / cover;
+    transform: scale(1.05);
+    transition: 1s;
+    cursor: pointer;
+}
+
+.destaques__secundario:nth-child(2){
+    background: url('imagens/apex.jpg') no-repeat center / cover;
+    grid-column: 4;
+    grid-row: 1;
+}
+
+.destaques__secundario:nth-child(2):hover{
+    background: url('imagens/apex2.webp') no-repeat center / cover;
+    grid-column: 4;
+    grid-row: 1;
+    transition: transform 1s;
+    transition: 1s;
+}
+
+.destaques__secundario:nth-child(3){
+    background: url('imagens/fifa.jpg') no-repeat center / cover;
+    grid-column: 4;
+    grid-row: 2;
+}
+
+.destaques__secundario:nth-child(3):hover{
+    background: url('imagens/fifa2.webp') no-repeat center / cover;
+    grid-column: 4;
+    grid-row: 2;
+    transition: transform 1s;
+    transition: 1s;
+}
+
+
+
+.destaques__secundario:nth-child(4){
+    background: url('imagens/spider.png') no-repeat center / cover;
+    grid-column: 3;
+    grid-row: 3;
+}
+
+.destaques__secundario:nth-child(4):hover{
+    background: url('imagens/spider2.jpg') no-repeat center / cover;
+    grid-column: 3;
+    grid-row: 3;
+    transition: 1s;
+}
+
+.destaques__secundario:nth-child(5){
+    background: url('imagens/cs-go.jpg') no-repeat center / cover;
+    grid-column: 4;
+    grid-row: 3;
+}
+.destaques__secundario:nth-child(5):hover{
+    background: url('imagens/cs2.jpg') no-repeat center / cover;
+    grid-column: 4;
+    grid-row: 3;
+    transition: 1s;
+}
+
+.destaques__secundario:nth-child(6){
+    background: url('imagens/god.jpg') no-repeat center / cover;
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.destaques__secundario:nth-child(6):hover{
+    background: url('imagens/god2.webp') no-repeat center / cover;
+    grid-column: 1;
+    grid-row: 3;
+    transition: 1s;
+}
+
+.destaques__secundario:nth-child(7){
+    background: url('imagens/cuphead.webp') no-repeat center / cover;
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.destaques__secundario:nth-child(7):hover{
+    background: url('imagens/cuphead2.jpg') no-repeat center / cover;
+    grid-column: 2;
+    grid-row: 3;
+    transition: transform 1s;
+    transition: 1s;
+}
+
+.destaques__secundario:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+
+.destaques__titulo{
+    text-transform: uppercase;
+    display: none;
+}
+
+.destaques__categorias{
+    grid-column: 1 / 3;
+}
+
+.destaque:nth-child(2){
+    padding: 10px;
+}
+.destaques__categorias___lista{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+.destaques__categorias___link {
+    color: inherit;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 5px;
+}
+
+/*populares*/
+.populares{
+    padding: 3rem 1rem;
+}
+
+.populares__card{
+    display: grid;
+    grid-template-areas: 
+        "card-imagem"
+        "card-corpo";
+    grid-template-columns: 100%;
+    grid-template-rows: 173px auto;
+    background: #fdfdfd;
+    width: calc(20% - 1rem);
+    margin: 0.5rem;
+}
+
+.populares__card___imagem{
+    grid-area: card-imagem;
+    height: 100%;
+    width: 100%;
+}
+
+.populares__card___corpo{
+    display: grid;
+    grid-area: card-corpo;
+    grid-template-areas: 
+    "cabeçalho"
+    "conteudo";
+    grid-template-rows: 50px auto;
+    padding: .75rem;
+}
+
+.populares__conteudo{
+   display: flex;
+   flex-wrap: wrap;
+    grid-area: conteudo;
+    padding: 1rem 0rem;
+}
+
+.populares__card___titulo{
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.populares__card___data{
+    font-size: .9rem;
+    color: #808080;
+}
+
+.populares__card___descricao{
+    color: #333;
+    line-height: 1.5;
+    text-align: justify;
+    margin: 1em 0;
+}
+
+.populares__titulo{
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.populares__icone{
+    margin-right: .20rem;
+}
+.populares__cabecalho{
+ border-bottom: 1px solid #dcdcdc;
+ display: flex;
+ justify-content: space-between;
+}
+
+.populares__botao{
+    background: transparent;
+    border: none;
+    color: #333;
+}
+
+.conteudo {
+    grid-area: conteudo;
+    padding: 0 2rem;
+}
+
+
+/*rodape*/
+.rodape{
+    background: whitesmoke;
+    text-align: center;
+}
