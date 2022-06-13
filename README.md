@@ -1,2 +1,2 @@
-# Loja-de-games-grids
-Projeto para treinar grids
+# Loja-de-games-grids-desktop
+Projeto para treinanr grids
